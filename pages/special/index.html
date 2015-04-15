@@ -1,1 +1,21 @@
-special
+<div class="main">
+     <div class="app_header">
+        <h2>ویژه ها</h2>
+      </div>
+      <div class="post_rent"> 
+         
+                <!------------------------------------------------------------------>
+                <div class="post_one" ng-repeat="melk in special | orderBy:'-id'" post_one="true"  melk_id="{{melk.id}}">
+                    <img ng-src="http://www.shoooma.com/admin/include/upload/special-small/{{melk.picname}}" >
+                      <div class="detail">
+                        <h3>{{melk.title}}</h3>
+                        <p class="des">{{melk.description}}</p>
+                        
+                      </div>
+                      <div class="icon"><i class="fa fa-angle-left"></i></div>
+                      <div class="clear"></div>
+                </div>
+        
+	   </div>
+
+    </div>

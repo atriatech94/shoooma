@@ -1,7 +1,8 @@
 angular.module('shoooma')
 	.config(function($routeProvider) {
 		$routeProvider.when('/home', {
-		templateUrl: '/pages/home/index.html'
+		templateUrl: '/pages/home/index.html',
+        controller: 'IndexController',
 	  })
 	  
 	   .when('/rent', {
@@ -26,6 +27,7 @@ angular.module('shoooma')
 			
 			.when('/special', {
 			templateUrl: 'pages/special/index.html',
+			controller: 'SpecialIndexController',
 			})
 			
 			.when('/submit', {
@@ -33,7 +35,8 @@ angular.module('shoooma')
 			})
 			
 	  .when('/', {
-		templateUrl: 'pages/home/index.html',
+		  templateUrl: 'pages/home/index.html',
+           controller: 'IndexController',
 		})
 		
 		.otherwise({ redirectTo: '/' });

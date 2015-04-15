@@ -4,29 +4,36 @@ body {
 }
 </style>
 <!-- Initialize Swiper -->
+
 <div class="swiper-container swiper2" >
+
 <div class="swiper-wrapper">
   <div class="swiper-slide"> 
     <!------------------------------------------------------------------------------------------->
     <div class="main">
+     <sw-fancy>
      <div class="app_header">
         <h2>لیست املاک رهن و اجاره</h2>
       </div>
       <div class="post_rent"> 
-        <!------------------------------------------------------------------>
-        <div class="post_one" melk_id="123"> <img src="img/rent-ico.png" >
-          <div class="detail">
-            <h3>آپارتمان</h3>
-            <p class="des">یک واحد آپارتمان به متراژ 100 متر واقع در خیابان رودکی کوچه 23 جنب عینک مردمک </p>
-            <p class="small"><span>دیروز</span><span>کد : 273</span></p>
-          </div>
-          <!---- endd detail ----->
-          <div class="icon"><i class="fa fa-angle-left"></i></div>
-          <div class="clear"></div>
-        </div>
-        <!------------------------------------------------------------------> 
+         
+                <!------------------------------------------------------------------>
+                <div class="post_one" ng-repeat="melk in rent1 | orderBy:'-date' | filter:search  | filter:filter" post_one="true"  melk_id="{{melk.id}}">
+                    <img src="img/rent-ico.png" >
+                      <div class="detail">
+                        <h3>{{melk.kind}}</h3>
+                        <p class="des">{{melk.description}}</p>
+                        <p class="small"><span>{{melk.dates}}</span><span>کد : {{melk.id}}</span><span ng-show="{{melk.status === '1'}}">فسخ شده</span></p>
+                      </div>
+                      <!---- endd detail ----->
+                      <div class="icon"><i class="fa fa-angle-left"></i></div>
+                      <div class="clear"></div>
+                </div>
+                <!------------------------------------------------------------------> 
+        
 	   </div>
       <!---- end post_rent -----> 
+       </sw-fancy>
     </div>
     <!---- end main -----> 
     <!-------------------------------------------------------------------------------------------------------> 
@@ -37,9 +44,9 @@ body {
   	<div class="main">
     <div class="img_logo"></div>
     <p>استان را انتخاب کنید</p>
-    	<select class="city" name="city">
-          <option value="آذربایجان شرقی">آذربایجان شرقی</option>
-          <option value="آذربایجان غربی">آذربایجان غربی</option>
+    	<select ng-model="filter.state" ng-init="tab1=1"  class="city" name="city">
+          <option  value="آذربایجان شرقی">آذربایجان شرقی</option>
+          <option  value="آذربایجان غربی">آذربایجان غربی</option>
           <option value="اردبیل">اردبیل</option>
           <option value="اصفهان">اصفهان</option>
           <option value="البرز">البرز</option>
@@ -54,7 +61,7 @@ body {
           <option value="زنجان">زنجان</option>
           <option value="سمنان">سمنان</option>
           <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
-          <option selected value="فارس" selected>فارس</option>
+          <option ng-selected="{selected:tab1===1}" value="فارس" >فارس</option>
           <option value="قزوین">قزوین</option>
           <option value="قم">قم</option>
           <option value="کردستان">کردستان</option>
@@ -71,9 +78,10 @@ body {
           <option value="یزد">یزد</option>
         </select>
          <p>انتخاب تاریخ </p>
-        <div class="days" >
-            <a ng-repeat="times in times"  href="#">
-            	{{times}}
+        <div class="days" ng-init="tab=1" >
+            <a  href="" ng-class="{active:tab===1}"  ng-click="prformSearch(1)" > نماش همه </a>
+            <a ng-repeat="times in times"  ng-class="{active:tab===times.d}" href= "" ng-click="prformSearch(times.d)" >
+                {{times.l}}
             </a>
         </div>
     
