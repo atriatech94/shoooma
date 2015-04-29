@@ -1,21 +1,16 @@
-<div class="main">
+
+<div class="contain">
      <div class="app_header">
         <h2>ویژه ها</h2>
+         <a class="back_icon" href="#/" ><img src="img/back1.png" /></a>
       </div>
-      <div class="post_rent"> 
+      <div class="special"> 
          
                 <!------------------------------------------------------------------>
-                <div class="post_one" ng-repeat="melk in special | orderBy:'-id'" post_one="true"  melk_id="{{melk.id}}">
-                    <img ng-src="http://www.shoooma.com/admin/include/upload/special-small/{{melk.picname}}" >
-                      <div class="detail">
-                        <h3>{{melk.title}}</h3>
-                        <p class="des">{{melk.description}}</p>
-                        
-                      </div>
-                      <div class="icon"><i class="fa fa-angle-left"></i></div>
-                      <div class="clear"></div>
+                <div class="special_one" ng-repeat="melk in special | orderBy:'-id'" post_one="true"  melk_id="{{melk.id}}">
+                    <img ng-src="http://www.shoooma.com/admin/include/upload/special/{{melk.picname}}" >
+                    <h3>{{melk.title}}</h3>
+                    <p class="des">{{melk.description}}</p>
                 </div>
-        
-	   </div>
-
     </div>
+</div>

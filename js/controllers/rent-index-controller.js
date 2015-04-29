@@ -28,7 +28,8 @@ angular.module('shoooma')
     
     $scope.times = times;
 
-    var days3 = moment().subtract(3, 'days').valueOf() ;    
+    var days3 = moment().subtract(3, 'days').valueOf() ;   
+	 
     $scope.rent = $rootScope.rent;
     $scope.rent.forEach(function(rent) {
                     
@@ -42,25 +43,31 @@ angular.module('shoooma')
                     else{
                         
                          rent.dates =    moment(d.valueOf()).format(' jD  jMMMM ');
+						 
                     }
-                      
+                     rent.dates1 =    moment(d.valueOf()).format('YYYY-MM-DD'); 
                   
                 });
             
     $scope.rent1 =  $scope.rent;
 
        $scope.prformSearch = function(searchText) {
+		   
+
+			
           if(searchText == 1)
           {
+			  
               $scope.rent1 =  $scope.rent;
               $scope.tab =1;
+			  
                return   $scope.rent1;
               
               
           }
-          
-          $scope.rent1 = $filter('filter')($scope.rent, {date:searchText});
+          $scope.rent1 = $filter('filter')($scope.rent, {dates1:searchText});
            $scope.tab = searchText;
+		       
                     return   $scope.rent1;
                
         }  
@@ -76,6 +83,10 @@ angular.module('shoooma')
        				 slidesPerView: 'auto',
                       followFinger : false,
 				});
+                flags= 0;
+                    $('body').delegate(".menu_icon ","click",function(){
+                        if(flags==0){swiper2.slideNext();flags ++; }else{swiper2.slidePrev();flags-- ;}
+                    }); 
 			},//end link
 			templateUrl : "pages/rent/sw-swipe2.html"
 		}

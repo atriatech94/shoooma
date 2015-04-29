@@ -16,6 +16,37 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+document.addEventListener("backbutton",amintest, false);
+
+function amintest(){
+                        
+    
+    
+    var loc =   window.location.hash;
+    loc = loc.replace("#/", "");
+    var res = loc.split("/");
+
+    if($.fancybox.isOpen)
+	{
+		$.fancybox.close();
+		return false;
+	}
+    if(loc == "home" || loc == "")
+    {
+                                           
+       var r = confirm("Are you sure you want to exit ?");
+        if (r == true) {
+        navigator.app.exitApp(); 
+       }
+    }                         
+    else
+    {
+	   								
+         window.location.hash = "#/home";
+    }
+    return false;
+}
+ 
 var app = {
     // Application Constructor
     initialize: function() {

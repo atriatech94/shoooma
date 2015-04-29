@@ -8,19 +8,17 @@
 
 <body>
 <div class="main">
-  <div class="app_header">
-    <h2>ثبت ملک شما</h2>
-  </div>
   <!------app_header------->
   <div class="des">
     <ul>
-      <li>- بخش ثبت ملک در سایت شما به صورت آنلاین می باشد،</li>
-      <li>- هر ثبت درخواست بعد از گذشت 24 ساعت از زمان آن به مدت یک ماه دارای اعتبار است،</li>
-      <li>- وچناچه بعد از ثبت درخواست خود به مشکل مواجه شدید با شماره پشتیبانی 09171086249 تماس حاصل فرمائید.</li>
+      <li>بخش به من خبر بده در سایت شماداری سیستمی هوشمند است،</li>
+      <li> که جهت آسان وسریعتر رساندن  شما به  هدف طراحی شده است،</li>
+      <li>  از آنجا که این برنامه به صورت اتوماتیک در ارسال پیامک از داده های شما استفاده میکند، در وارد نمودن اطلاعات خود دقت فرمائید،</li>
+      <li>درصورت بروز مشکل با شماره پشتیبانی 09171086249تماس حاصل فرمائید.</li>
     </ul>
   </div>
   <div class="myform">
-    <form action="http://www.shoooma.com/request/get_data_announce_me" method="post">
+    <form action="http://www.shoooma.com/app/get_data_announce_me" method="get">
       <label class="request_label"> <span class="form_name">نوع درخواست </span>
         <select class="select" name="type" id="type">
           <option value="0">خرید</option>
@@ -30,25 +28,25 @@
       <div class="clear"></div>
       <!----------end label--------------------->
       <label class="request_label"> <span class="form_name">نام و نام خانوادگی </span>
-        <input type="text" name="fullname" value="" />
+        <input type="text" name="fullname" id="name" />
         <span class="form_error"></span> </label>
       <div class="clear"></div>
       <!----------end label---------------------> 
       <span class="request_label"> <span class="form_name"> قیمت به تومان</span>
-      <input type="number" class="text" id="pricee"  name="from" placeholder="از مبلغ تومان"/>
-      <input type="number" class="text" id="pricee" name="to" placeholder="تا مبلغ تومان"/>
-      <span class="form_error"></span> </span>
+      <input type="number" class="text" id="price1"   name="from" placeholder="از مبلغ تومان"/>
+      <input type="number" class="text" id="price2"  name="to" placeholder="تا مبلغ تومان"/>
+     </span>
       <div class="clear"></div>
       <!----------end label---------------------> 
       <span class="request_label" id="fild"  style="display:none"> <span class="form_name">قیمت اجاره</span>
-      <input type="number" class="text" id="price"  name="rent_from" id="rent_from" placeholder="از مبلغ"/>
-      <input type="number" class="text" id="price" name="rent_to" id="rent_to" placeholder="تا مبلغ"/>
+      <input type="number" class="text"   name="rent_from" id="rent_from" placeholder="از مبلغ"/>
+      <input type="number" class="text"  name="rent_to" id="rent_to" placeholder="تا مبلغ"/>
       <span class="form_error"></span> </span>
       <div class="clear"></div>
       <!----------end label---------------------> 
       <!----------end label--------------------->
       <label class="request_label"> <span class="form_name">شغل </span>
-        <input type="text" name="job" value=""  />
+        <input type="text" name="job" id="job"  />
         <span class="form_error"></span> </label>
       <div class="clear"></div>
       <!----------end label--------------------->
@@ -102,7 +100,7 @@
         <!-----------------------------------------------mahdode---------------------------------------------------------------->
         <input type="hidden" name="city" id="state">
       </label>
-      <label class="request_label"> <span class="form_name">شهرستان </span> 
+      <label class="request_label"><span class="form_name">شهرستان </span> 
         <!---------------------------------------------------end label---------------------------------------------------------->
         <select class="select"  name="Shahrestan" id="Shahrestan" runat="server">
         </select>
@@ -116,12 +114,12 @@
       <div class="clear"></div>
       <!----------end label--------------------->
       <label class="request_label"> <span class="form_name">تلفن همراه </span>
-        <input type="text" name="mobile" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value=""  placeholder="شماره تماس" />
+        <input type="number" name="mobile" id="tel"  placeholder="شماره تماس" />
         <span class="form_error"></span> </label>
       <div class="clear"></div>
       <!----------end label--------------------->
       <label class="checkbox">
-        <input type="radio" name="sms" class="radio" value="21" />
+        <input type="radio" name="sms" class="radio" checked value="21" />
         <ico></ico>
         اشتراک یک ماهه ( تا 50 پیامک ) </label>
       <label class="checkbox">
@@ -135,9 +133,8 @@
       <div class="clear"></div>
       <!----------end label--------------------->
       
-      <button type="sumbit" class="form_submit"  />
-      ثبت و پرداخت
-      </button>
+      <button id="submit" class="form_submit"  />ثبت و پرداخت </button>
+   
     </form>
   </div>
 </div>
@@ -163,19 +160,16 @@ $(document).ready(function(e) {
 			if(text=="1")
 			{
 		       $('#fild').css("display","block");
-			   $('#rent_from').attr('required','required');
-			   $('#rent_to').attr('required','required');	
+			  
 			}
 			else
 			{
 				$('#fild').css("display","none");
-				$('#rent_from').removeAttr('required');
-			   $('#rent_to').removeAttr('required');	
+					
 			}
 		});//end click
 });
 
-//var ss = $('#type').find(":selected").text();
 </script> 
 <script> 
  function Func(Shahrestanha) {
@@ -194,23 +188,52 @@ $(document).ready(function(e) {
        }
    }
    
+</script>
 
- $(document).ready(function(e) {
+<script>
 
-    $('*#pricee').keyup(function (event) {
-        // skip for arrow keys
-        if (event.which >= 37 && event.which <= 40) {
-            event.preventDefault();
-        }
-        var $this = $(this);
+$(document).ready(function(e) {
+	
+		$('#submit').click(function(){
+			
+			 var type = $('#type option:selected').val();
+			 var name = $('#name').val();
+			 var price1 = $('#price1').val();
+			 var price2 = $('#price2').val();
+			 var rent_from = $('#rent_from').val();
+			 var rent_to = $('#rent_to').val();
+			 var job = $('#job').val();
+			 var tel = $('#tel').val();
+			 if(type == 0)
+			 {
+				 if( name == "" || price1 == "" || price2 == "" || job == "" || tel == "" )
+				 {
+					 alert('فیلد های فرم نباید خالی باشند');
+					 return false;
+				 }
+			 }
+			 else
+			 {
+				 if(name == "" || price1 == "" || price2 == "" || job == "" || tel == "" || rent_from == "" || rent_to == "")
+				 {
+					 alert('فیلد های فرم نباید خالی باشند');
+					 return false;
+				 }
+			 }
+			 
+			 	
+			if( tel.length != 11) 
+	     {
+			        alert("شماره تلفن همراه معتیر نیست");
+				    return false;
+		 }
 		
-        var num = $this.val().replace(/,/g, '');
-        // the following line has been simplified. Revision history contains original.
-        $this.val(num.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"));
-    });
-
+		
+        });
+		
 });
 
-</script>
+
+</script> 
 </body>
 </html>

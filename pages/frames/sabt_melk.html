@@ -9,9 +9,6 @@
 
 <body>
 <div class="main">
-  <div class="app_header">
-    <h2>ثبت ملک شما</h2>
-  </div>
   <!------app_header------->
   <div class="des">
     <ul>
@@ -21,7 +18,7 @@
     </ul>
   </div>
   <div class="myform">
-    <form action="" method="get">
+    <form action="http://shoooma.com/app/melk" method="get" >
         <label class="checkbox"> <ico></ico>
           <input type="radio" name="type" value="2" checked  ><ico></ico>
           رهن و اجاره </label>
@@ -88,12 +85,7 @@ $(document).ready(function(e) {
 				    return false;
 		 }
 		 
-		 $.get("http://shoooma.com/app/melk/h45748jjfhgiutsAArt/",{name:name , type:type , email:email , des:des , tel:tel}, function(data){
-                 alert("Data: " + data);
-				 
-          });
-			 
-			return false; 
+
 
    });
 });

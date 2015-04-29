@@ -10,15 +10,17 @@ body {
 <div class="swiper-wrapper">
   <div class="swiper-slide"> 
     <!------------------------------------------------------------------------------------------->
-    <div class="main">
+    <div class="main main100">
      <sw-fancy>
      <div class="app_header">
-        <h2>لیست املاک خرید و فروش</h2>
+          <a class="menu_icon" href="" ><img src="img/menu2.png" /></a>
+            <h2>لیست املاک خرید و فروش</h2>
+          <a class="back_icon" href="#/" ><img src="img/back1.png" /></a>
       </div>
       <div class="post_rent"> 
          
                 <!------------------------------------------------------------------>
-                <div class="post_one" ng-repeat="melk in rent1 | orderBy:'-date' | filter:search  | filter:filter" post_one="true"  melk_id="{{melk.id}}">
+                <div class="post_one" ng-repeat="melk in rent1 | orderBy:'-date' | filter:filter" post_one="true"  melk_id="{{melk.id}}">
                     <img src="img/sell-ico.png" >
                       <div class="detail">
                         <h3>{{melk.kind}}</h3>
@@ -41,7 +43,7 @@ body {
   </div>
   <!---- swpire slide 1 ------->
   <div class="swiper-slide swipe_menu">
-  	<div class="main">
+  	<div class="main main100">
     <div class="img_logo"></div>
     <p>استان را انتخاب کنید</p>
     	<select ng-model="filter.state" ng-init="tab1=1"  class="city" name="city">
@@ -77,12 +79,28 @@ body {
           <option value="همدان">همدان</option>
           <option value="یزد">یزد</option>
         </select>
-         <p>انتخاب تاریخ </p>
-        <div class="days" ng-init="tab=1" >
-            <a  href="" ng-class="{active:tab===1}"  ng-click="prformSearch(1)" > نماش همه </a>
-            <a ng-repeat="times in times"  ng-class="{active:tab===times.d}" href= "" ng-click="prformSearch(times.d)" >
-                {{times.l}}
-            </a>
+        <p>نوع ملک</p>
+    	<select ng-model="filter.kind"  class="city" name="kind">
+         <option  value="">تمامی موارد</option>
+          <option  value="آپارتمان">آپارتمان</option>
+          <option value="مسکونی">مسکونی</option>
+          <option value="تجاری کارگاهی">تجاری کارگاهی</option>
+          <option value="کارخانه ای">کارخانه ای</option>
+          <option value="زمین">زمین</option>
+          <option value="سایر">سایر</option>
+        </select>
+        <p>محدوده قیمت</p>
+    	  <select ng-model="category" ng-init="tab2=1" id="pri" class="city" name="mortgage">
+          <option ng-selected="{selected:tab2===1}"  value="0">همه</option>
+          <option   value="1">کمتر از 200 میلیون تومان</option>
+          <option   value="2">200 تا 300 میلیون تومان</option>
+          <option   value="3">300 تا 400 میلیون تومان</option>
+          <option   value="4">400 تا 500 میلیون تومان</option>
+          <option   value="5">500 تا 700 میلیون تومان</option>
+          <option   value="6">700 میلیون تا 1 میلیارد تومان</option>
+          <option   value="7">بیشتر از 1 میلیارد تومان</option>
+        </select>
+        
         </div>
     
     </div>
