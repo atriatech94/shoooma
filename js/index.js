@@ -24,7 +24,6 @@ function amintest(){
     
     var loc =   window.location.hash;
     loc = loc.replace("#/", "");
-    var res = loc.split("/");
 
     if($.fancybox.isOpen)
 	{
@@ -34,7 +33,7 @@ function amintest(){
     if(loc == "home" || loc == "")
     {
                                            
-       var r = confirm("Are you sure you want to exit ?");
+       var r = confirm("آیا برای خروج اطمینان دارید ؟");
         if (r == true) {
         navigator.app.exitApp(); 
        }

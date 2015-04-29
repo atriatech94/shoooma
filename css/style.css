@@ -199,8 +199,8 @@ ul, menu, dir {
 }
 .links_home a span {
 	display: block;
-	font-size: 14px;
-	padding-top: 5px;
+	font-size: 18px;
+	padding-top: 10px;
 }
 /*--=============-- rent  --===================--*/
 
@@ -466,15 +466,16 @@ ul, menu, dir {
 .melks_detail h2 {
 	padding: 6px 11px;
 	border-right: 4px solid #4DADE1;
-	font-size: 18px;
+	font-size: 20px;
 	color: #535353;
 }
 .melks_detail p {
-	font-size: 14px;
+	font-size: 16px;
 	padding: 10px 10px;
 	line-height: 20px;
 	text-align: justify;
 	word-spacing: 3px;
+	color: #36557E;
 }
 .melks_detail span {
 	display: block;
