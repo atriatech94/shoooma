@@ -41,7 +41,7 @@ function amintest(){
     else
     {
 	   								
-         window.location.hash = "#/home";
+         window.location.hash = "#/";
     }
     return false;
 }
