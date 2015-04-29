@@ -56,7 +56,7 @@ angular.module('shoooma')
                         
                     if(online == 1)
                     {   $.fancybox.close();
-                        window.location.hash ="#/";
+                        location.reload();
                     }else{
                        $('.refresh').fadeOut(100,function(){ $('.refresh').fadeIn(100)});
                     }
