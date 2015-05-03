@@ -7,13 +7,10 @@
 	Hex-color : #009390 green , #203b84 blue
 */
 html {
-	-ms-touch-action: pan-x;
-	touch-action: pan-x;
+	
 }
 body {
-	-ms-touch-action: pan-y;
-	touch-action: pan-y;
-	-ms-content-zooming: none;
+	
 	font-family: 'yekan', tahoma;
     direction: rtl
 }
