@@ -371,6 +371,7 @@ ul, menu, dir {
 }
 .post_rent {
 	overflow-y: auto;
+	 -webkit-overflow-scrolling: touch;
 	overflow-x: hidden;
 	height: 85vh;
 	padding: 10px 0 0;
@@ -438,6 +439,7 @@ ul, menu, dir {
 	height: 50vh;
 	background: #CCC;
 	overflow-y: auto;
+	 -webkit-overflow-scrolling: touch;
 	overflow-x: hidden;
 }
 .days a {
@@ -519,6 +521,8 @@ ul, menu, dir {
 #frame_set{
     width: 100%;
     height: 100vh;
+	overflow-y:auto;
+	 -webkit-overflow-scrolling: touch;
     margin: 0 ;
     padding: 0;
     
