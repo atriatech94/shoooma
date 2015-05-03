@@ -209,7 +209,6 @@ ul, menu, dir {
 	width: 100%;
 	height: 40px;
 	z-index: 2;
-	background-color: #fff;
 	text-overflow: ellipsis;
 	direction: rtl !important;
 	font-size: 18px !important;
@@ -285,11 +284,12 @@ ul, menu, dir {
     direction: rtl;
 }
 .main100{
-	width: 100%;
+	width: 99%;
+    margin: 0 auto;
 	}
 .post_rent {
-	width: 100%;
-	height: auto;
+	width: 99%;
+    margin: 0 auto;
 }
 .post_one {
 	border: 1px solid #C9C9C9;
@@ -485,6 +485,10 @@ ul, menu, dir {
 	border-right: 2px solid #33B383;
 	margin-top: 2px;
 }
+.melks_detail .custs{
+    border-right: 2px solid #529bc1 !important;
+    color: #2F8B9B !important;
+}
 .melks_detail span.m_status{
     color:#aa0a0a;
     border-color:#790505;
@@ -507,6 +511,12 @@ ul, menu, dir {
     position: relative;
     top:2px;
     margin-right: -10px;
+}
+.currency , .currency span{ 
+    color: #396234 !important;
+    text-shadow: 0px 0px 0px #257679;}
+.currency span{
+    padding-right: 0px !important;
 }
 /*--================--   submit --===================--*/
 #frame_set{
@@ -626,15 +636,23 @@ ul, menu, dir {
 /*--================--    --===================--*/
 /*--================--  Media Querys  --===================--*/
 @media only screen and (min-width : 481px) and (max-width :768px) {
-.post_one .detail {
-	width: 79%;
-}
+    .post_one .detail {
+        width: 79%;
+    }
+    .post_rent {
+        width: 90vw;
+        margin: 0px auto;
+    }
 }
 
 @media only screen and (max-width :480px) {
-.post_one .detail {
-	width: 62%;
-}
+    .post_one .detail {
+        width: 62%;
+    }
+    .post_rent {
+        width: 90vw;
+        margin: 0px auto;
+    }
 }
 
 @media only screen and (max-height :480px) and (orientation: landscape) {
