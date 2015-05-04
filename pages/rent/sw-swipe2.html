@@ -27,6 +27,7 @@ body {
                       <div class="detail">
                         <h3>{{melk.kind}}</h3>
                         <p class="des">{{melk.description}}</p>
+                        <p class="small currency"><span>رهن : {{melk.mortgage | currency : '' : 0  }} تومان</span><span>اجاره : {{melk.rent | currency : '' : 0  }} تومان</span></p>  
                         <p class="small"><span>{{melk.dates}}</span><span>کد : {{melk.id}}</span><span ng-show="{{melk.status === '1'}}">فسخ شده</span></p>
                       </div>
                       <!---- endd detail ----->

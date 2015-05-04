@@ -96,11 +96,16 @@ angular.module('shoooma')
 			link: function($scope) {
                     $( ".main" ).delegate( ".post_one", "click", function() {
                         var amin = $scope.rent;
+                        console.log(amin);
                         melk_id =  $(this).attr('melk_id');
                         var groups = $.grep(amin, function(e){ return e.id == melk_id });
                         var content = '<div class="melks_detail">';
                         content += '<h2>'+groups[0].kind+'/کد '+groups[0].id+'</h2>' ;
                         content += '<p class="m_detail">'+groups[0].description+'</p>' ;
+                        if(groups[0].type == 1)
+                            content += '<span class="custs">رهن '+groups[0].mortgage+' تومان , اجاره : '+groups[0].rent+' تومان</span>' ;
+                        else
+                            content += '<span class="custs">قیمت '+groups[0].mortgage+' تومان</span>' ;    
                         content += '<span class="m_date">'+groups[0].dates+'</span>' ;
                         content += '<span class="m_name">'+groups[0].name+'</span>' ;
                         content += '<span class="m_mobile">'+groups[0].mobile+'</span>' ;
