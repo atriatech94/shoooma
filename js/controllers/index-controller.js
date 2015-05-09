@@ -33,6 +33,7 @@ angular.module('shoooma')
                /*====================== click interneti link ===================================*/
                
                 $('.links_home a').click(function(event){
+                    document.getElementById("loading").style.display = "block";
                     console.log($rootScope.rent);
                     event.preventDefault;
                     num = $(this).index();
