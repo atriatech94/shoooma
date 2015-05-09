@@ -2,8 +2,8 @@
   <name>Shoooma estate</name>
   <description>estate</description>
   <author href="http://atriatech.ir" email="info@atriatech.ir">ATRIATECH</author>
-  <content src="index.html"/>
- <preference name="permissions" value="none"/>
+ <content src="index.html"/>
+  <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>
   <preference name="fullscreen" value="true"/>
@@ -19,8 +19,7 @@
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
  <preference name="UIWebViewBounce" value="false" />
- 
- 
+ <feature name="http://api.phonegap.com/1.0/network" />
   <gap:plugin name="org.apache.cordova.console"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
 
@@ -70,39 +69,28 @@
   <icon src="res/icon/windows-phone/icon-48.png" gap:platform="winphone"/>
   <icon src="res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
  
- <platform name="android">
-    <!-- you can use any density that exists in the Android project -->
-    <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
-    <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
-    <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
-    <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
-    <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
-    <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
-    <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
-    <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
-</platform>
 
-<platform name="ios">
-    <!-- images are determined by width and height. The following are supported -->
-    <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
-    <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
-    <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
-    <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
-    <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
-    <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
-    <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
-    <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
-    <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
-    <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
-</platform>
+    <splash src="res/screen/android/splash-land-hdpi.png" gap:platform="android" density="land-hdpi"/>
+    <splash src="res/screen/android/splash-land-ldpi.png" gap:platform="android" density="land-ldpi"/>
+    <splash src="res/screen/android/splash-land-mdpi.png" gap:platform="android" density="land-mdpi"/>
+    <splash src="res/screen/android/splash-land-xhdpi.png" gap:platform="android" density="land-xhdpi"/>
+    <splash src="res/screen/android/splash-port-hdpi.png" gap:platform="android" density="port-hdpi"/>
+    <splash src="res/screen/android/splash-port-ldpi.png" gap:platform="android" density="port-ldpi"/>
+    <splash src="res/screen/android/splash-port-mdpi.png" gap:platform="android" density="port-mdpi"/>
+    <splash src="res/screen/android/splash-port-xhdpi.png" gap:platform="android" density="port-xhdpi"/>
 
-<platform name="wp8">
-    <splash src="res/screen/windows-phone/splash.jpg" width="480" height="800"/>
-</platform>
+
+  <gap:splash src="res/screen/ios/screen-iphone-portrait.png"          gap:platform="ios"     width="320" height="480" />
+  <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png"       gap:platform="ios"     width="640" height="960" />
+  <gap:splash src="res/screen/ios/screen-iphone-landscape.png"         gap:platform="ios"     width="480" height="320" />
+  <gap:splash src="res/screen/ios/screen-iphone-landscape-2x.png"      gap:platform="ios"     width="960" height="640" />
+  <gap:splash src="res/screen/ios/screen-ipad-portrait.png"            gap:platform="ios"     width="768" height="1024" />
+  <gap:splash src="res/screen/ios/screen-ipad-portrait-2x.png"         gap:platform="ios"     width="1536" height="2008" />
+  <gap:splash src="res/screen/ios/screen-ipad-landscape.png"           gap:platform="ios"     width="1024" height="768" />
+  <gap:splash src="res/screen/ios/screen-ipad-landscape-2x.png"        gap:platform="ios"     width="2048" height="1496" />
+  <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png"  gap:platform="ios"     width="640"  height="1136" />
+
 <gap:splash src="res/screen/windows-phone/splash.jpg" gap:platform="winphone" />
-<preference name="SplashScreenDelay" value="1000" />
 
-
- 
   <access origin="*"/>
 </widget>

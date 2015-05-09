@@ -1,7 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
-body {
+.main{
+    
+    padding-bottom: 140px;
+    width: 100%;
+    height: autol;
+    margin-bottom: 300px
 }
 
 h1 {

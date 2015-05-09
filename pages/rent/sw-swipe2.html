@@ -1,13 +1,5 @@
-<style>
-body {
-	direction: ltr;
-}
-
-</style>
 <!-- Initialize Swiper -->
-
 <div class="swiper-container swiper2" >
-
 <div class="swiper-wrapper">
   <div class="swiper-slide"> 
     <!------------------------------------------------------------------------------------------->
@@ -16,13 +8,13 @@ body {
      <div class="app_header">
          <a class="menu_icon" href="" ><img src="img/menu2.png" /></a>
          <h2>لیست املاک رهن و اجاره</h2>
-         <a class="back_icon" href="#/" ><img src="img/back1.png" /></a>
+         <a class="back_icon sps" href="#/"  ><img src="img/back1.png" /></a>
          <div class="clear"></div>
       </div>
       <div class="post_rent"> 
          
                 <!------------------------------------------------------------------>
-                <div class="post_one" ng-repeat="melk in rent1 | orderBy:'-date'  | filter:filter | limitTo:60 " post_one="true"  melk_id="{{melk.id}}">
+                <div class="post_one" ng-repeat="melk in rent1 | orderBy:'-date'  | filter:filter | limitTo:90 " post_one="true"  melk_id="{{melk.id}}">
                     <img src="img/rent-ico.png" >
                       <div class="detail">
                         <h3>{{melk.kind}}</h3>
