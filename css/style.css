@@ -11,7 +11,6 @@ html {
 	touch-action: pan-x;*/
 }
 body {
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	/*-ms-touch-action: pan-y;
 	touch-action: pan-y;
 	-ms-content-zooming: none;
@@ -34,7 +33,6 @@ body {
 	line-height: 1;
 	color: black;
 	background: white;
-
 }
 :focus {
 	outline: 0;
@@ -215,7 +213,7 @@ ul, menu, dir {
 	font-size: 18px !important;
 	text-align: right !important;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 0px;
 	transition: .3s linear all;
 	-moz-transition: .3s linear all;
 	-webkit-transition: .3s linear all;
@@ -244,7 +242,6 @@ ul, menu, dir {
     width: 70% !important;
     height: 20px;
     white-space: nowrap; 
-	-webkit-overflow-scrolling: touch;
     overflow: hidden;
     text-overflow: ellipsis; 
 }
@@ -333,9 +330,7 @@ background-position: right;
 .post_one .detail {
 	float: right;
 	width: 65%;
-	-webkit-overflow-scrolling: touch;
 	overflow: hidden;
-	
 }
 .post_one .icon {
 	float: left;
@@ -358,7 +353,6 @@ background-position: right;
 	font-size: 1.2em;
 }
 .post_one .detail .des {
-	-webkit-overflow-scrolling: touch;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -392,10 +386,9 @@ background-position: right;
 	width: 250px;
 }
 .post_rent {
-	-webkit-overflow-scrolling: touch;
 	overflow-y: auto !important;
 	overflow-x: hidden;
-	height: 80vh;
+	height: 78vh;
 	padding: 10px 0 0;
 }
 .swipe-wrap {
@@ -426,7 +419,7 @@ background-position: right;
 .swipe_menu .main {
 	background: #242A3A;
 	height: 100vh;
-    width: 100%;
+	width:100%;
 	direction: rtl;
 	padding: 0;
 }
@@ -461,7 +454,6 @@ background-position: right;
 	border-bottom: 1px solid #222838;
 }
 .days {
-	-webkit-overflow-scrolling: touch;
 	width: 100%;
 	height: 50vh;
 	background: #CCC;
@@ -525,22 +517,22 @@ background-position: right;
     
 }
 .days a.active:before{
-  content: "";
-  background-image: url(../img/checked.png);
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  position: relative;
-  top: 2px;
-  margin-right: -10px;
-  width: 20px;
-  height: 20px;
-  background-size: 100%;
-  margin-right: 1px;
+	  content: "";
+	  background-image: url(../img/checked.png);
+	  display: inline-block;
+	  font: normal normal normal 14px/1 FontAwesome;
+	  font-size: inherit;
+	  text-rendering: auto;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  transform: translate(0, 0);
+	  position: relative;
+	  top: 2px;
+	  margin-right: -10px;
+	  width: 20px;
+	  height: 20px;
+	  background-size: 100%;
+	  margin-right: 1px;
 }
 .currency , .currency span{ 
     color: #396234 !important;
@@ -554,7 +546,6 @@ background-position: right;
     height: 85vh;
     margin: 0 ;
     padding: 0;
-	-webkit-overflow-scrolling: touch;
     overflow: hidden;
     
     
@@ -563,7 +554,6 @@ background-position: right;
 /*--================--  special  --===================--*/
 .contain{
     padding: 1em 1em;
- 
     
 }
 .special_one{
@@ -594,7 +584,6 @@ background-position: right;
     font-size: 13px;
     color: #225360;
     margin-top: 7px;
-	-webkit-overflow-scrolling: touch;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -616,9 +605,8 @@ background-position: right;
 .contents{
     width: 100%;
     height: 80vh;
-	-webkit-overflow-scrolling: touch;
-    overflow-y: auto;
-    overflow-x:hidden 
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .contents p{
     width: 90%;
@@ -626,8 +614,8 @@ background-position: right;
     margin: 20px auto;
     text-indent: 5px;
     margin-right: 2%;
-    border-right: 4px solid #3F719B ;
-    padding:5px  10px 5px 10px;
+    border-right: 4px solid #3F719B;
+    padding: 5px 10px 5px 10px ;
     text-align: justify;
     
 }
@@ -691,7 +679,7 @@ background-position: right;
 
 @media only screen and (max-width :480px) {
     .post_one .detail {
-        width: 60% !important;
+          width: 60% !important;
     }
     .post_rent {
         width: 90vw;
@@ -705,20 +693,15 @@ background-position: right;
 
 @media only screen and (max-height :480px) and (orientation: landscape) {
 .post_one .detail {
-	 width: 60% !important;
+	  width: 60% !important;
 }
-    .post_rent {
-        height: 60vh;
-    }
+
 }
 
 @media only screen and (min-height : 481px) and (max-height :768px) and (orientation: landscape) {
 .post_one .detail {
 	width: 79%;
 }
-     .post_rent {
-        height: 80vh;
-    }
 
 }
 /*--=============--   --===================--*/

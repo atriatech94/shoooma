@@ -14,7 +14,7 @@
       <div class="post_rent"> 
          
                 <!------------------------------------------------------------------>
-                <div class="post_one" ng-repeat="melk in rent1 | orderBy:'-date'  | filter:filter | limitTo:90 " post_one="true"  melk_id="{{melk.id}}">
+                <div class="post_one" ng-repeat="melk in rent1 | orderBy:'-date'  | filter:filter  " post_one="true"  melk_id="{{melk.id}}">
                     <img src="img/rent-ico.png" >
                       <div class="detail">
                         <h3>{{melk.kind}}</h3>
