@@ -7,10 +7,16 @@
 	Hex-color : #009390 green , #203b84 blue
 */
 html {
-	/*-ms-touch-action: pan-x;
-	touch-action: pan-x;*/
+	overflow: hidden;
+    -ms-content-zooming: none;
 }
+ @-ms-viewport {
+    width: device-width; ;
+    height: device-height; ;
+    }
+    
 body {
+	-ms-touch-action: pan-y ;
 	/*-ms-touch-action: pan-y;
 	touch-action: pan-y;
 	-ms-content-zooming: none;
@@ -387,6 +393,7 @@ background-position: right;
 }
 .post_rent {
 	overflow-y: auto !important;
+	-ms-touch-action: pan-y ;
 	overflow-x: hidden;
 	height: 78vh;
 	padding: 10px 0 0;
@@ -458,6 +465,7 @@ background-position: right;
 	height: 50vh;
 	background: #CCC;
 	overflow-y: auto;
+	-ms-touch-action: pan-y ;
 	overflow-x: hidden;
 }
 .days a {
@@ -607,6 +615,7 @@ background-position: right;
     height: 80vh;
     overflow-x: hidden;
     overflow-y: scroll;
+	-ms-touch-action: pan-y ;
 }
 .contents p{
     width: 90%;
