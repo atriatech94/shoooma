@@ -20,6 +20,7 @@ html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, c
 	vertical-align: baseline;
 }
 body {
+	-webkit-overflow-scrolling: touch;
 	line-height: 1;
 	color: black;
 	background: white;

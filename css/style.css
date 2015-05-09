@@ -246,7 +246,6 @@ ul, menu, dir {
     white-space: nowrap; 
 	-webkit-overflow-scrolling: touch;
     overflow: hidden;
-	-webkit-overflow-scrolling: touch;
     text-overflow: ellipsis; 
 }
 .menu_icon{
