@@ -1,43 +1,55 @@
-angular.module('shoooma')
+angular.module('kiarash')
 	.config(function($routeProvider) {
-		$routeProvider.when('/home', {
-		templateUrl: '/pages/home/index.html',
-        controller: 'IndexController',
+		$routeProvider
+        .when('/home', {
+		templateUrl: 'page/home/index.html',
+		controller: 'HomeController'
 	  })
-	  
-	   .when('/rent', {
-			templateUrl: 'pages/rent/index.html',
-			 controller: 'RentIndexController',
-             
-			})
-			
-			.when('/about', {
-			templateUrl: 'pages/about/index.html',
-			
-			})
-			
-			.when('/news', {
-			templateUrl: 'pages/news/index.html',
-			})
-			
-			.when('/sales', {
-			templateUrl: 'pages/sales/index.html',
-			controller: 'SalesIndexController',
-			})
-			
-			.when('/special', {
-			templateUrl: 'pages/special/index.html',
-			controller: 'SpecialIndexController',
-			})
-			
-			.when('/submit', {
-			templateUrl: 'pages/submit/index.html',
-			})
-			
-	  .when('/', {
-		  templateUrl: 'pages/home/index.html',
-           controller: 'IndexController',
+        .when('/service', {
+		templateUrl: 'page/service/index.html',
+		 controller: 'ServiceController'
 		})
-		
-		.otherwise({ redirectTo: '/' });
+        .when('/lipomatic', {
+		templateUrl: 'page/lipomatic/index.html',
+		 controller: 'LipomaticController'
+		})
+        .when('/gallery', {
+		templateUrl: 'page/gallery/index.html',
+		 controller: 'GalleryController'
+		})
+        .when('/about', {
+		templateUrl: 'page/about/index.html',
+		 controller: 'AboutController'
+		})
+        .when('/contact', {
+		templateUrl: 'page/contact/index.html',
+		 controller: 'ContactController'
+		})
+        .when('/faq', {
+		templateUrl: 'page/faq/index.html',
+		 controller: 'FaqController'
+		})
+        .when('/blog', {
+		templateUrl: 'page/blog/index.html',
+		 controller: 'BlogController'
+		})
+        .when('/blogdetail/:id', {
+		templateUrl: 'page/blogdetail/index.html',
+		 controller: 'BlogdetailController'
+		})
+        .when('/gallery/1', {
+		templateUrl: 'page/gallerydetail/1.html',
+		})
+        .when('/gallery/2', {
+		templateUrl: 'page/gallerydetail/2.html',
+		})
+        .when('/gallery/3', {
+         templateUrl: 'page/gallerydetail/3.html',
+		})
+        .when('/gallery/4', {
+		templateUrl: 'page/gallerydetail/4.html',
+		})
+        
+        
+		.otherwise({ redirectTo: '/home' });
 });
