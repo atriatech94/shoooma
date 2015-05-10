@@ -51,27 +51,780 @@ angular.module('shoooma')
             
     $scope.rent1 =  $scope.rent;
 
-       $scope.prformSearch = function(searchText) {
-		   
+      var price = [];
 
-			
-          if(searchText == 1)
-          {
-			  
-              $scope.rent1 =  $scope.rent;
-              $scope.tab =1;
-			  
-               return   $scope.rent1;
-              
-              
-          }
-          $scope.rent1 = $filter('filter')($scope.rent, {dates1:searchText});
-           $scope.tab = searchText;
-		       
-                    return   $scope.rent1;
-               
-        }  
+		$scope.$watch('[price, price1]', function() {
 
+              if($scope.price == 0 &&  $scope.price1 == 0 || $scope.price === undefined &&  $scope.price1 === undefined  )
+			  {
+				   $scope.price = 0 ;
+				   $scope.price1 = 0;
+                   $scope.rent1 = $scope.rent;
+				   return;
+			  }
+			  
+			  else
+			  {
+				  j=0;
+				  price = [];
+				  if($scope.price == 0 && $scope.price1 == 1)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].rent < 400000 )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  if($scope.price == 0 && $scope.price1 == 2)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].rent >= 400000 && $scope.rent[i].rent <= 700000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				   if($scope.price == 0 && $scope.price1 == 3)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].rent >= 700000 && $scope.rent[i].rent <= 1000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				   if($scope.price == 0 && $scope.price1 == 4)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].rent >= 1000000 && $scope.rent[i].rent <= 2000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				   if($scope.price == 0 && $scope.price1 == 5)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].rent >= 2000000 && $scope.rent[i].rent <= 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				   if($scope.price == 0 && $scope.price1 == 6)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].rent > 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  
+				  /*------------------------------- 1 ----------------------------------------*/
+				     if($scope.price == 1 && $scope.price1 == 0)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage < 10000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 1 && $scope.price1 == 1)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage < 10000000 && $scope.rent[i].rent < 400000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 1 && $scope.price1 == 2 )
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage < 10000000 && $scope.rent[i].rent >= 400000 && $scope.rent[i].rent <= 700000   )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 1 && $scope.price1 == 3)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage < 10000000 && $scope.rent[i].rent >= 700000 && $scope.rent[i].rent <= 1000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 1 && $scope.price1 == 4)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage < 10000000 && $scope.rent[i].rent >= 1000000 && $scope.rent[i].rent <= 2000000 )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 1 && $scope.price1 == 5)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage < 10000000 && $scope.rent[i].rent >= 2000000 && $scope.rent[i].rent <= 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 1 && $scope.price1 == 6)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage < 10000000 && $scope.rent[i].rent > 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  
+				  
+				  /*-----------------------------------------------------------------------*/
+				  
+				   /*------------------------------- 2 ----------------------------------------*/
+				     if($scope.price == 2 && $scope.price1 == 0)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 10000000 && $scope.rent[i].mortgage <= 20000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 2 && $scope.price1 == 1)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 10000000 && $scope.rent[i].mortgage <= 20000000 && $scope.rent[i].rent < 400000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 2 && $scope.price1 == 2 )
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 10000000 && $scope.rent[i].mortgage <= 20000000 && $scope.rent[i].rent >= 400000 && $scope.rent[i].rent <= 700000   )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 2 && $scope.price1 == 3)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 10000000 && $scope.rent[i].mortgage <= 20000000 && $scope.rent[i].rent >= 700000 && $scope.rent[i].rent <= 1000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 2 && $scope.price1 == 4)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 10000000 && $scope.rent[i].mortgage <= 20000000 && $scope.rent[i].rent >= 1000000 && $scope.rent[i].rent <= 2000000 )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 2 && $scope.price1 == 5)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 10000000 && $scope.rent[i].mortgage <= 20000000 && $scope.rent[i].rent >= 2000000 && $scope.rent[i].rent <= 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 2 && $scope.price1 == 6)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 10000000 && $scope.rent[i].mortgage <= 20000000 && $scope.rent[i].rent > 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  
+				  
+				  /*-----------------------------------------------------------------------*/
+				  
+				    /*------------------------------- 3 ----------------------------------------*/
+				     if($scope.price == 3 && $scope.price1 == 0)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 20000000 && $scope.rent[i].mortgage <= 35000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 3 && $scope.price1 == 1)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 20000000 && $scope.rent[i].mortgage <= 35000000 && $scope.rent[i].rent < 400000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 3 && $scope.price1 == 2 )
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 20000000 && $scope.rent[i].mortgage <= 35000000 && $scope.rent[i].rent >= 400000 && $scope.rent[i].rent <= 700000   )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 3 && $scope.price1 == 3)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 20000000 && $scope.rent[i].mortgage <= 35000000 && $scope.rent[i].rent >= 700000 && $scope.rent[i].rent <= 1000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 3 && $scope.price1 == 4)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 20000000 && $scope.rent[i].mortgage <= 35000000 && $scope.rent[i].rent >= 1000000 && $scope.rent[i].rent <= 2000000 )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 3 && $scope.price1 == 5)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 20000000 && $scope.rent[i].mortgage <= 35000000 && $scope.rent[i].rent >= 2000000 && $scope.rent[i].rent <= 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 3 && $scope.price1 == 6)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 20000000 && $scope.rent[i].mortgage <= 35000000 && $scope.rent[i].rent > 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  
+				  
+				  /*-----------------------------------------------------------------------*/
+				  
+				  /*------------------------------- 4 ----------------------------------------*/
+				     if($scope.price == 4 && $scope.price1 == 0)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 35000000 && $scope.rent[i].mortgage <= 50000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 4 && $scope.price1 == 1)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 35000000 && $scope.rent[i].mortgage <= 50000000 && $scope.rent[i].rent < 400000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 4 && $scope.price1 == 2 )
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 35000000 && $scope.rent[i].mortgage <= 50000000 && $scope.rent[i].rent >= 400000 && $scope.rent[i].rent <= 700000   )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 4 && $scope.price1 == 3)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 35000000 && $scope.rent[i].mortgage <= 50000000 && $scope.rent[i].rent >= 700000 && $scope.rent[i].rent <= 1000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 4 && $scope.price1 == 4)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 35000000 && $scope.rent[i].mortgage <= 50000000 && $scope.rent[i].rent >= 1000000 && $scope.rent[i].rent <= 2000000 )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 4 && $scope.price1 == 5)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 35000000 && $scope.rent[i].mortgage <= 50000000 && $scope.rent[i].rent >= 2000000 && $scope.rent[i].rent <= 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 4 && $scope.price1 == 6)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 35000000 && $scope.rent[i].mortgage <= 50000000 && $scope.rent[i].rent > 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  
+				  
+				  /*-----------------------------------------------------------------------*/
+				  
+				  /*------------------------------- 5 ----------------------------------------*/
+				     if($scope.price == 5 && $scope.price1 == 0)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 50000000 && $scope.rent[i].mortgage <= 70000000)
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 5 && $scope.price1 == 1)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 50000000 && $scope.rent[i].mortgage <= 70000000 && $scope.rent[i].rent < 400000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 5 && $scope.price1 == 2 )
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 50000000 && $scope.rent[i].mortgage <= 70000000 && $scope.rent[i].rent >= 400000 && $scope.rent[i].rent <= 700000   )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 5 && $scope.price1 == 3)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 50000000 && $scope.rent[i].mortgage <= 70000000 && $scope.rent[i].rent >= 700000 && $scope.rent[i].rent <= 1000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 5 && $scope.price1 == 4)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 50000000 && $scope.rent[i].mortgage <= 70000000 && $scope.rent[i].rent >= 1000000 && $scope.rent[i].rent <= 2000000 )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 5 && $scope.price1 == 5)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 50000000 && $scope.rent[i].mortgage <= 70000000 && $scope.rent[i].rent >= 2000000 && $scope.rent[i].rent <= 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 5 && $scope.price1 == 6)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 50000000 && $scope.rent[i].mortgage <= 70000000 && $scope.rent[i].rent > 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  
+				  
+				  /*-----------------------------------------------------------------------*/
+				  
+				   /*------------------------------- 6 ----------------------------------------*/
+				     if($scope.price == 6 && $scope.price1 == 0)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 70000000 && $scope.rent[i].mortgage <= 100000000)
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 6 && $scope.price1 == 1)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 70000000 && $scope.rent[i].mortgage <= 100000000 && $scope.rent[i].rent < 400000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 6 && $scope.price1 == 2 )
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 70000000 && $scope.rent[i].mortgage <= 100000000 && $scope.rent[i].rent >= 400000 && $scope.rent[i].rent <= 700000   )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 6 && $scope.price1 == 3)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 70000000 && $scope.rent[i].mortgage <= 100000000 && $scope.rent[i].rent >= 700000 && $scope.rent[i].rent <= 1000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 6 && $scope.price1 == 4)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 70000000 && $scope.rent[i].mortgage <= 100000000 && $scope.rent[i].rent >= 1000000 && $scope.rent[i].rent <= 2000000 )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 6 && $scope.price1 == 5)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 70000000 && $scope.rent[i].mortgage <= 100000000 && $scope.rent[i].rent >= 2000000 && $scope.rent[i].rent <= 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 6 && $scope.price1 == 6)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 70000000 && $scope.rent[i].mortgage <= 100000000 && $scope.rent[i].rent > 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  
+				  
+				  /*-----------------------------------------------------------------------*/
+				  
+				  
+				   /*------------------------------- 7 ----------------------------------------*/
+				     if($scope.price == 7 && $scope.price1 == 0)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 100000000)
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 7 && $scope.price1 == 1)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 100000000 && $scope.rent[i].rent < 400000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 7 && $scope.price1 == 2 )
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 100000000 && $scope.rent[i].rent >= 400000 && $scope.rent[i].rent <= 700000   )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 7 && $scope.price1 == 3)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 100000000 && $scope.rent[i].rent >= 700000 && $scope.rent[i].rent <= 1000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 7 && $scope.price1 == 4)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 100000000 && $scope.rent[i].rent >= 1000000 && $scope.rent[i].rent <= 2000000 )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 7 && $scope.price1 == 5)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 100000000 && $scope.rent[i].rent >= 2000000 && $scope.rent[i].rent <= 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				     if($scope.price == 7 && $scope.price1 == 6)
+				  {
+					  
+					  for(i=0;i<$scope.rent.length;i++)
+				       {
+						  if($scope.rent[i].mortgage >= 100000000 && $scope.rent[i].rent > 3000000  )
+						  {
+					        price[j]=$scope.rent[i];
+							j++;
+						  }
+				       }
+					  
+				  }
+				  
+				  
+				  /*-----------------------------------------------------------------------*/
+				  
+				  
+				  
+				 $scope.rent1 = price; 
+				
+			  }
+            });
       
 
 })

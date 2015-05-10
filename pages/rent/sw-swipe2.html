@@ -5,15 +5,16 @@
     <!------------------------------------------------------------------------------------------->
     <div class="main main100">
      <sw-fancy>
+      <!------------------------------------------------------------------------------------------->
      <div class="app_header">
          <a class="menu_icon" href="" ><img src="img/menu2.png" /></a>
          <h2>لیست املاک رهن و اجاره</h2>
          <a class="back_icon sps" href="#/"  ><img src="img/back1.png" /></a>
          <div class="clear"></div>
       </div>
+      <!------------------------------------------------------------------------------------------->
       <div class="post_rent"> 
-         
-                <!------------------------------------------------------------------>
+      <!------------------------------------------------------------------>
                 <div class="post_one" ng-repeat="melk in rent1 | orderBy:'-date'  | filter:filter  " post_one="true"  melk_id="{{melk.id}}">
                     <img src="img/rent-ico.png" >
                       <div class="detail">
@@ -26,7 +27,7 @@
                       <div class="icon"><i class="fa fa-angle-left"></i></div>
                       <div class="clear"></div>
                 </div>
-                <!------------------------------------------------------------------> 
+         <!------------------------------------------------------------------> 
         
 	   </div>
       <!---- end post_rent -----> 
@@ -38,7 +39,7 @@
   </div>
   <!---- swpire slide 1 ------->
   <div class="swiper-slide swipe_menu">
-  	<div class="main main100">
+  	<div class="main main100 main_sw">
     <div class="img_logo"></div>
     <p>استان را انتخاب کنید</p>
     	<select ng-model="filter.state" ng-init="tab1=1"  class="city" name="city">
@@ -84,12 +85,28 @@
           <option value="زمین">زمین</option>
           <option value="سایر">سایر</option>
         </select>
-         <p>انتخاب تاریخ </p>
-        <div class="days" ng-init="tab=1" >
-            <a  href="" ng-class="{active:tab===1}"  ng-click="prformSearch(1)" > نماش همه </a>
-            <a ng-repeat="times in times"  ng-class="{active:tab===times.d}" href= "" ng-click="prformSearch(times.d)" >
-                {{times.l}} 
-            </a>
+        <p>محدوده قیمت رهن</p>
+    	  <select ng-model="price" ng-init="tab2=1" id="pri" class="city" name="mortgage">
+          <option ng-selected="{selected:tab2===1}"  value="0">همه</option>
+          <option   value="1">کمتر از 10 میلیون تومان</option>
+          <option   value="2">10 تا 20 میلیون تومان</option>
+          <option   value="3">20 تا 35 میلیون تومان</option>
+          <option   value="4">35 تا 50 میلیون تومان</option>
+          <option   value="5">50 تا 70 میلیون تومان</option>
+          <option   value="6">70 تا 100 میلیون تومان</option>
+          <option   value="7">بیشتر از 100 میلیون تومان</option>
+        </select>
+        
+         <p>محدوده قیمت اجاره</p>
+    	  <select ng-model="price1" ng-init="tab3=1" id="pri" class="city" name="mortgage">
+          <option ng-selected="{selected:tab3===1}"  value="0">همه</option>
+          <option   value="1">کمتر از 400 هزار تومان</option>
+          <option   value="2">400 تا 700 هزار تومان</option>
+          <option   value="3">700 هزار تا 1 میلیون تومان</option>
+          <option   value="4">1 تا 2 میلیون تومان</option>
+          <option   value="5">2 تا 3 میلیون تومان</option>
+          <option   value="6">بیشتر از 3 میلیارد تومان</option>
+        </select>
         </div>
     
     </div>
