@@ -1,4 +1,6 @@
 (function(){
-var app = angular.module('kiarash', ['ngRoute']);
+angular.module('shoooma', ['ngRoute','ngResource']);
+      
 
 })();
+

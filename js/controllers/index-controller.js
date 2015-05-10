@@ -73,51 +73,13 @@ angular.module('shoooma')
     }//end return 
     
     
-}])
-.directive('fixScroll', function($rootScope){
-    
-    return {
-			link: function($rootScope) {
-                flg1 = 0 ; 
-                window.addEventListener( "scroll", function( event ) {
-                    
-                    
-                    if ($(window).scrollTop() > 50){
-                        
-                        $('.main_sw').css('top',($(window).scrollTop()+65));
-                        
-                        if(flg1 == 0 )
-                            {
-                                var appheader = $('.app_header').html();
-                                $('sw-swipe2 , sw-swipe').prepend('<div class="app_header2 fix_menu">'+appheader+'</div>');
-                                $('.app_header').hide(0);
-                                flg1 = 1 ; 
-                            }
-                        //endif
-                        } else {
-                            
-                            $('.main_sw').css('top',0);
-                            var appheader = $('.app_header').html();
-                            $('.app_header2').remove();
-                            $('.app_header').show(0);
-                            flg1 = 0 ; 
-                    }  // end esle
-                    
-                });/*end scroll*/
-       
-                $('body').delegate(".app_header2 .menu_icon","click",function(){return false;});
-   }//end return 
-    
-    
-}})
-
+}]);
 function get_data_rent(Rent,$rootScope){
     Rent.all()
     .success(function(data){
        $rootScope.rent = data;
 	   console.log(data);
         return $rootScope.rent;
-        
     })
     .error(function(){
        $rootScope.rent = "none";
