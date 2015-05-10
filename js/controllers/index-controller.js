@@ -79,7 +79,8 @@ angular.module('shoooma')
     return {
 			link: function($rootScope) {
                 flg1 = 0 ; 
-                $(window).bind('scroll', function() { 
+                window.addEventListener( "scroll", function( event ) {
+                    
                     
                     if ($(window).scrollTop() > 50){
                         
