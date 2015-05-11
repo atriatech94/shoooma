@@ -874,10 +874,10 @@ angular.module('shoooma')
                         $.fancybox.open( content,{
                             padding : 20 ,
                             afterClose: function() {
-                              $('.main100').css('overflow-y','auto');
+                             
                             }
                         });
-                        $('.main100').css('overflow-y','hidden');
+                        
                         
                     });
                     
