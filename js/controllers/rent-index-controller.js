@@ -836,10 +836,7 @@ angular.module('shoooma')
        				 slidesPerView: 'auto',
                       followFinger : false,
 				});
-                flags= 0;
-                    $('body').delegate(".menu_icon ","click",function(){
-                        if(flags==0){swiper2.slideNext();flags ++; }else{swiper2.slidePrev();flags-- ;}
-                    }); 
+                 
 			},//end link
 			templateUrl : "pages/rent/sw-swipe2.html"
 		}
@@ -847,10 +844,19 @@ angular.module('shoooma')
 .directive('swFancy', function (){
 		return {
 			link: function($scope) {
+				
+			var flags= 0;
+                    $('body').delegate(".menu_icon ","click",function(){
+                        if(flags==0){swiper2.slideNext();flags ++; }else{swiper2.slidePrev();flags-- ;}
+                    });
+                var fancyopen = 0 ;
                     $( ".main" ).delegate( ".post_one", "click", function() {
+                        $("*.post_one").removeClass('active');
+                        $(this).addClass('active');
                         var amin = $scope.rent;
                         console.log(amin);
                         melk_id =  $(this).attr('melk_id');
+                        
                         var groups = $.grep(amin, function(e){ return e.id == melk_id });
                         var content = '<div class="melks_detail">';
                         content += '<h2>'+groups[0].kind+'/کد '+groups[0].id+'</h2>' ;
@@ -866,15 +872,28 @@ angular.module('shoooma')
                         content += '<div>' ;
                         
                         $.fancybox.open( content,{
-                            padding : 20
+                            padding : 20 ,
+                            afterClose: function() {
+                              $('.main100').css('overflow-y','auto');
+                            }
                         });
+                        $('.main100').css('overflow-y','hidden');
+                        
                     });
                     
+                    
+                    $('body').delegate('.fancybox-overlay',"click",function(){
+                        alert(123);
+                    });
                 
                 /*==================================================================*/
-                var amin = $('.app_header').html();
-                 $('sw-swipe2').prepend('<div class="app_header2">'+amin+'</div>');
-                 $('.app_header').hide(0);
+                
+                /*==================================================================*/
+                $('body').css("overflow","hidden");
+                $('body').delegate(".app_header2 .menu_icon","click",function(){return false;});
+                //var amin = $('.app_header').html();
+                // $('sw-swipe2').prepend('<div class="app_header2">'+amin+'</div>');
+                 //$('.app_header').hide(0);
                      
 			},//end link
         }

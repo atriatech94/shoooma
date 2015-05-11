@@ -218,10 +218,11 @@ ul, menu, dir {
     padding-top: 20px;
     position: fixed;
     top: 0px;
-    right: 10px;
+    right:0px;
     background-color:#fff;
     padding:30px 15px 0px 10px;
     width: 98.5%;
+    box-shadow: -7px 0px 10px -6px #767d95 inset;
 
 }
 
@@ -310,10 +311,16 @@ background-position: right;
 .main100{
 	width: 99%;
     margin: 0 auto;
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    
 	}
 .post_rent {
 	width: 98%;
     margin:60px auto ;
+    
+    z-index: 4;
 
 }
 .post_one {
@@ -337,6 +344,9 @@ background-position: right;
 }
 .post_one:active {
 	background: #C0E9E9;
+}
+.post_rent .active{
+    background: #C0E9E9 !important;
 }
 .post_one:visited {
 	background: #C0E9E9;
@@ -408,8 +418,6 @@ background-position: right;
 }
 .swiper-slide:nth-child(2) {
 	width: 250px;
-    height: 100%;
-    position: fixed
 }
 .post_rent {
 	-webkit-overflow-scrolling: touch;
@@ -578,15 +586,14 @@ background-position: right;
     
     
 }
-.fancybox-overlay {
-    overflow: hidden !important;
-}
 /*--================--  special  --===================--*/
 .contain{
     padding: 1em 1em;
-    margin-top: 60px;
- 
-    
+
+}
+.special{
+    margin-top:80px;
+    position: relative;
 }
 .special_one{
     width: 100%;
@@ -677,7 +684,92 @@ background-position: right;
 }
 .swiper-slide:nth-child(1) {
     box-shadow: -8px 0px 10px -6px #767d95 inset;
+    -webkit-box-shadow: -8px 0px 10px -6px #767d95 inset;
+    -moz-box-shadow: -8px 0px 10px -6px #767d95 inset;
 }
+/*--=============--   --===================--*/
+#contact_us{
+    width: 90%;
+    margin: 20px 0;
+}
+
+#contact_us label{
+    display: block;
+    width: 100%;
+    
+}
+#contact_us span{
+    display: block;
+    text-align: right;
+    margin: 20px 10px 10px;
+}
+#contact_us input{
+    text-align: right;
+    font-family: yekan;
+    font-weight: 100;
+    font-size: 13px;
+    padding: 10px 4px;
+    width: 100%;
+    border: 1px solid #808080;
+}
+#contact_us button{
+ font-family: yekan !important;
+    width: 100%;
+    height: 40px;
+    padding: .8em;
+}
+#contact_us textarea{
+    height: 150px !important;
+    width:98.5%;
+    font-family: yekan !important;
+    padding: .5em;
+    border: 1px solid #808080;
+}
+.us{
+	color: #000 !important;
+}
+p{
+    direction: rtl;
+}
+.refresh{
+    width: 100%;
+    height: 35px;
+    border:none;
+    background-color: #427cac;
+    color:#fff;
+    margin-top:20px;
+    font-family: yekan, tahoma;
+    
+}
+.shake {
+    animation-name: thumb;
+    animation-duration: 200ms;
+	transform-origin:50% 50%;
+	animation-iteration-count: 2;
+    animation-timing-function: linear;
+    animation-fill-mode: normal;
+	animation-direction: alternate;
+    animation-play-state: running;
+    -webkit-animation-name: thumb;
+	-webkit-animation-duration: 200ms;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 2;
+	-webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: normal;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-play-state: running;
+}
+@-webkit-keyframes thumb {
+	0% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(0.9); }
+	100% { -webkit-transform: scale(1); }
+}
+keyframes thumb {
+	0% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(0.9); }
+	100% { -webkit-transform: scale(1); }
+}
+/*--=============--   --===================--*/
 /*--================--    --===================--*/
 /*--================--    --===================--*/
 /*--================--    --===================--*/
@@ -706,12 +798,15 @@ background-position: right;
         width: 98%;
         margin: 60px auto;
     }
+    .home_main{
+        margin-top: 20%;
+    }
 
 }
 
 @media only screen and (max-width :480px) {
     .post_one .detail {
-        width: 60% !important;
+        width: 55% !important;
     }
     .post_rent {
         width: 98%;
@@ -720,6 +815,9 @@ background-position: right;
 
     .app_header h2 {
         width: 60% !important;
+    }
+     .home_main{
+        margin-top: 20%;
     }
 }
 

@@ -31,14 +31,14 @@ angular.module('shoooma')
     return {
 			link: function($rootScope) {
                /*====================== click interneti link ===================================*/
-               
+               $('body').css("overflow","auto");
                 $('.links_home a').click(function(event){
                     document.getElementById("loading").style.display = "block";
                     console.log($rootScope.rent);
                     event.preventDefault;
                     num = $(this).index();
 				
-                    if(num != 5 )
+                    if(num )
                     {
                         //rent
                         if($rootScope.sale == "none" )

@@ -176,13 +176,17 @@ angular.module('shoooma')
        				 slidesPerView: 'auto',
                       followFinger : false,
 				});
-                flags= 0;
+               var flags1= 0;
                  $('body').delegate(".menu_icon ","click",function(){
-                   if(flags==0){swiper2.slideNext();flags ++; }else{swiper2.slidePrev();flags-- ;}
+                   if(flags1==0){swiper2.slideNext();flags1 ++; }else{swiper2.slidePrev();flags1-- ;}
                 });
-                var amin = $('.app_header').html();
-                 $('sw-swipe').prepend('<div class="app_header2">'+amin+'</div>');
-                 $('.app_header').hide(0);
+                
+                $('body').css("overflow","hidden");
+                $('body').delegate(".app_header2 .menu_icon","click",function(){return false;});
+                
+                //var amin = $('.app_header').html();
+                // $('sw-swipe').prepend('<div class="app_header2">'+amin+'</div>');
+                // $('.app_header').hide(0);
 			},//end link
 			templateUrl : "pages/sales/sw-swipe.html"
 		}

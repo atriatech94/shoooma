@@ -13,6 +13,7 @@ angular.module('shoooma')
 			
 			.when('/about', {
 			templateUrl: 'pages/about/index.html',
+            controller: 'AboutIndexController',
 			
 			})
 			

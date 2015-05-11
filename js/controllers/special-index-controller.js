@@ -8,7 +8,7 @@ angular.module('shoooma')
 .directive('swFancy2', function (){
 		return {
 			link: function($scope) {
-             
+             $('body').css("overflow","hidden");
                     $( ".contain" ).delegate( ".special_one", "click", function() {
                         var amin = $scope.special;
                         console.log(amin);
@@ -21,10 +21,19 @@ angular.module('shoooma')
                         content += '<div>' ;
                         
                         $.fancybox.open( content,{
-                            padding : 20
+                            padding : 20,
+                            afterClose: function() {
+                              $('.main100').css('overflow-y','auto');
+                            }
                         });
+                       
                     });
-                    
+                     
+                        /*==========================================================================*/
+                        // var amin = $('.app_header').html();
+                        // $('sw-fancy2').prepend('<div class="app_header2">'+amin+'</div>');
+                        // $('.app_header').hide(0);
+                        /*==========================================================================*/
                      
 			},//end link
         }
