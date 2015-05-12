@@ -1,17 +1,19 @@
 <sw-fancy2>
-<div class="contain main100">
-     <div class="app_header">
-        <h2>ویژه ها</h2>
-         <a class="back_icon" href="#/" ><img src="img/back1.png" /></a>
-      </div>
-      <div class="special"> 
-         
-                <!------------------------------------------------------------------>
-                <div class="special_one" ng-repeat="melk in special | orderBy:'-id'" post_one="true"  melk_id="{{melk.id}}">
-                    <img ng-src="http://www.shoooma.com/admin/include/upload/special/{{melk.picname}}" >
-                    <h3>{{melk.title}}</h3>
-                    <p class="des">{{melk.description}}</p>
-                </div>
+    <div class="main1 main100">
+        <div class="app_header">
+            <h2>ویژه ها</h2>
+             <a class="back_icon" href="#/" ><img src="img/back1.png" /></a>
+        </div>
+        <div class="clear"></div>
+<br><br><br>
+        <div class="post_rent"> 
+             <!------------------------------------------------------------------>
+              <div class="special_one" ng-repeat="melk in special | orderBy:'-id'" post_one="true"  melk_id="{{melk.id}}">
+                  <img ng-src="http://www.shoooma.com/admin/include/upload/special/{{melk.picname}}" >
+                  <h3>{{melk.title}}</h3>
+                  <p class="des">{{melk.description}}</p>
+              </div>
+            <br><br><br>
+        </div>
     </div>
-</div>
 </sw-fancy2>

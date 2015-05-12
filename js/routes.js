@@ -18,7 +18,7 @@ angular.module('shoooma')
 			})
 			
 			.when('/news', {
-			templateUrl: 'pages/news/index.html',
+			     templateUrl: 'pages/news/index.html',
 			})
 			
 			.when('/sales', {

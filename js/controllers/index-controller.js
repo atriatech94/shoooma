@@ -2,7 +2,7 @@ var getdata = 0;
 
 angular.module('shoooma')
 .controller('IndexController', function($scope,$rootScope,Rent,Sale,Special) {
-    
+    document.getElementById("loading").style.display = "none";
 	 if(getdata == 1)
 	{
 		 document.getElementById("loading").style.display = "none";
@@ -33,7 +33,9 @@ angular.module('shoooma')
                /*====================== click interneti link ===================================*/
                $('body').css("overflow","auto");
                 $('.links_home a').click(function(event){
+                    
                     document.getElementById("loading").style.display = "block";
+                    
                     console.log($rootScope.rent);
                     event.preventDefault;
                     num = $(this).index();

@@ -30,9 +30,9 @@ angular.module('shoooma')
                     });
                      
                         /*==========================================================================*/
-                        // var amin = $('.app_header').html();
-                        // $('sw-fancy2').prepend('<div class="app_header2">'+amin+'</div>');
-                        // $('.app_header').hide(0);
+                        var amin = $('.app_header').html();
+                        $('sw-fancy2').prepend('<div class="app_header2">'+amin+'</div>');
+                        $('.app_header').hide(0);
                         /*==========================================================================*/
                      
 			},//end link
