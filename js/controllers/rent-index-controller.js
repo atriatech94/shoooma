@@ -870,11 +870,11 @@ angular.module('shoooma')
                         content += '<span class="m_mobile">'+groups[0].mobile+'</span>' ;
                         if(groups[0].status==1){ content += '<span class="m_status">فسخ شده</span>' ;}
                         content += '<div>' ;
-                        $('.main100').css({' -webkit-overflow-scrolling':'none','overflow-y':'hidden'});
+                      //  $('.main100').css({' -webkit-overflow-scrolling':'none','overflow-y':'hidden'});
                         $.fancybox.open( content,{
                             padding : 20 ,
                             afterClose: function() {
-                              $('.main100').css({' -webkit-overflow-scrolling':'touch','overflow-y':'auto'});
+                             // $('.main100').css({' -webkit-overflow-scrolling':'touch','overflow-y':'auto'});
                             }
                         });
                         
