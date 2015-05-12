@@ -6,6 +6,10 @@ angular.module('shoooma')
 .directive('contactAs', function (){
 		return {
 			link: function($scope) {
+                
+                        var amin = $('.app_header').html();
+                        $('contact-as').prepend('<div class="app_header2">'+amin+'</div>');
+                        $('.app_header').hide(0);
                     
                 /*==========================================================================*/
                     
