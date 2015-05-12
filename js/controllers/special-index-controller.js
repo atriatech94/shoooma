@@ -16,7 +16,7 @@ angular.module('shoooma')
                         var groups = $.grep(amin, function(e){ return e.id == melk_id });
                         var content = '<div class="melks_detail">';
                         content += '<h2>'+groups[0].title+'</h2><br>' ;
-                        content += '<img width="90" src="http://www.shoooma.com/admin/include/upload/special/'+groups[0].picname+'">' ;
+                        content += '<img width="100%" src="http://www.shoooma.com/admin/include/upload/special/'+groups[0].picname+'">' ;
                         content += '<br><div class="m_detail">'+groups[0].description+'</div>' ;
                         content += '<div>' ;
                         

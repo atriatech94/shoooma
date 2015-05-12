@@ -40,76 +40,78 @@
   <!---- swpire slide 1 ------->
   <div class="swiper-slide swipe_menu">
   	<div class="main main100 main_sw">
-    <div class="img_logo"></div>
-    <p>استان را انتخاب کنید</p>
-    	<select ng-model="filter.state" ng-init="tab1=1"  class="city" name="city">
-          <option  value="آذربایجان شرقی">آذربایجان شرقی</option>
-          <option  value="آذربایجان غربی">آذربایجان غربی</option>
-          <option value="اردبیل">اردبیل</option>
-          <option value="اصفهان">اصفهان</option>
-          <option value="البرز">البرز</option>
-          <option value="ایلام">ایلام</option>
-          <option value="بوشهر">بوشهر</option>
-          <option value="تهران">تهران</option>
-          <option value="چهار محال و بختیاری">چهار محال و بختیاری</option>
-          <option value="خراسان جنوبی">خراسان جنوبی</option>
-          <option value="خراسان رضوی">خراسان رضوی</option>
-          <option value="خراسان شمالی">خراسان شمالی</option>
-          <option value="خوزستان">خوزستان</option>
-          <option value="زنجان">زنجان</option>
-          <option value="سمنان">سمنان</option>
-          <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
-          <option ng-selected="{selected:tab1===1}" value="فارس" >فارس</option>
-          <option value="قزوین">قزوین</option>
-          <option value="قم">قم</option>
-          <option value="کردستان">کردستان</option>
-          <option value="کرمان">کرمان</option>
-          <option value="کرمانشاه">کرمانشاه</option>
-          <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
-          <option value="گلستان">گلستان</option>
-          <option value="گیلان">گیلان</option>
-          <option value="لرستان">لرستان</option>
-          <option value="مازندران">مازندران</option>
-          <option value="مرکزی">مرکزی</option>
-          <option value="هرمزگان">هرمزگان</option>
-          <option value="همدان">همدان</option>
-          <option value="یزد">یزد</option>
-        </select>
-         <p>نوع ملک</p>
-    	<select ng-model="filter.kind" ng-init="tab2=1"  class="city" name="kind">
-         <option  value="">تمامی موارد</option>
-          <option  value="آپارتمان">آپارتمان</option>
-          <option value="مسکونی">مسکونی</option>
-          <option value="تجاری کارگاهی">تجاری کارگاهی</option>
-          <option value="کارخانه ای">کارخانه ای</option>
-          <option value="زمین">زمین</option>
-          <option value="سایر">سایر</option>
-        </select>
-        <p>محدوده قیمت رهن</p>
-    	  <select ng-model="price" ng-init="tab2=1" id="pri" class="city" name="mortgage">
-          <option ng-selected="{selected:tab2===1}"  value="0">همه</option>
-          <option   value="1">کمتر از 10 میلیون تومان</option>
-          <option   value="2">10 تا 20 میلیون تومان</option>
-          <option   value="3">20 تا 35 میلیون تومان</option>
-          <option   value="4">35 تا 50 میلیون تومان</option>
-          <option   value="5">50 تا 70 میلیون تومان</option>
-          <option   value="6">70 تا 100 میلیون تومان</option>
-          <option   value="7">بیشتر از 100 میلیون تومان</option>
-        </select>
-        
-         <p>محدوده قیمت اجاره</p>
-    	  <select ng-model="price1" ng-init="tab3=1" id="pri" class="city" name="mortgage">
-          <option ng-selected="{selected:tab3===1}"  value="0">همه</option>
-          <option   value="1">کمتر از 400 هزار تومان</option>
-          <option   value="2">400 تا 700 هزار تومان</option>
-          <option   value="3">700 هزار تا 1 میلیون تومان</option>
-          <option   value="4">1 تا 2 میلیون تومان</option>
-          <option   value="5">2 تا 3 میلیون تومان</option>
-          <option   value="6">بیشتر از 3 میلیارد تومان</option>
-        </select>
+    <div class="fiix">
+        <div class="img_logo"></div>
+        <p>استان را انتخاب کنید</p>
+            <select ng-model="filter.state" ng-init="tab1=1"  class="city" name="city">
+              <option  value="آذربایجان شرقی">آذربایجان شرقی</option>
+              <option  value="آذربایجان غربی">آذربایجان غربی</option>
+              <option value="اردبیل">اردبیل</option>
+              <option value="اصفهان">اصفهان</option>
+              <option value="البرز">البرز</option>
+              <option value="ایلام">ایلام</option>
+              <option value="بوشهر">بوشهر</option>
+              <option value="تهران">تهران</option>
+              <option value="چهار محال و بختیاری">چهار محال و بختیاری</option>
+              <option value="خراسان جنوبی">خراسان جنوبی</option>
+              <option value="خراسان رضوی">خراسان رضوی</option>
+              <option value="خراسان شمالی">خراسان شمالی</option>
+              <option value="خوزستان">خوزستان</option>
+              <option value="زنجان">زنجان</option>
+              <option value="سمنان">سمنان</option>
+              <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
+              <option ng-selected="{selected:tab1===1}" value="فارس" >فارس</option>
+              <option value="قزوین">قزوین</option>
+              <option value="قم">قم</option>
+              <option value="کردستان">کردستان</option>
+              <option value="کرمان">کرمان</option>
+              <option value="کرمانشاه">کرمانشاه</option>
+              <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
+              <option value="گلستان">گلستان</option>
+              <option value="گیلان">گیلان</option>
+              <option value="لرستان">لرستان</option>
+              <option value="مازندران">مازندران</option>
+              <option value="مرکزی">مرکزی</option>
+              <option value="هرمزگان">هرمزگان</option>
+              <option value="همدان">همدان</option>
+              <option value="یزد">یزد</option>
+            </select>
+             <p>نوع ملک</p>
+            <select ng-model="filter.kind" ng-init="tab2=1"  class="city" name="kind">
+             <option  value="">تمامی موارد</option>
+              <option  value="آپارتمان">آپارتمان</option>
+              <option value="مسکونی">مسکونی</option>
+              <option value="تجاری کارگاهی">تجاری کارگاهی</option>
+              <option value="کارخانه ای">کارخانه ای</option>
+              <option value="زمین">زمین</option>
+              <option value="سایر">سایر</option>
+            </select>
+            <p>محدوده قیمت رهن</p>
+              <select ng-model="price" ng-init="tab2=1" id="pri" class="city" name="mortgage">
+              <option ng-selected="{selected:tab2===1}"  value="0">همه</option>
+              <option   value="1">کمتر از 10 میلیون تومان</option>
+              <option   value="2">10 تا 20 میلیون تومان</option>
+              <option   value="3">20 تا 35 میلیون تومان</option>
+              <option   value="4">35 تا 50 میلیون تومان</option>
+              <option   value="5">50 تا 70 میلیون تومان</option>
+              <option   value="6">70 تا 100 میلیون تومان</option>
+              <option   value="7">بیشتر از 100 میلیون تومان</option>
+            </select>
+
+             <p>محدوده قیمت اجاره</p>
+              <select ng-model="price1" ng-init="tab3=1" id="pri" class="city" name="mortgage">
+              <option ng-selected="{selected:tab3===1}"  value="0">همه</option>
+              <option   value="1">کمتر از 400 هزار تومان</option>
+              <option   value="2">400 تا 700 هزار تومان</option>
+              <option   value="3">700 هزار تا 1 میلیون تومان</option>
+              <option   value="4">1 تا 2 میلیون تومان</option>
+              <option   value="5">2 تا 3 میلیون تومان</option>
+              <option   value="6">بیشتر از 3 میلیارد تومان</option>
+            </select>
+            </div>
+
         </div>
-    
-    </div>
+      </div><!---- end fiiix --->
     <!---- main ----->
   </div>
 </div>

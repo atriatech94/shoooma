@@ -870,18 +870,16 @@ angular.module('shoooma')
                         content += '<span class="m_mobile">'+groups[0].mobile+'</span>' ;
                         if(groups[0].status==1){ content += '<span class="m_status">فسخ شده</span>' ;}
                         content += '<div>' ;
-                        
+                        $('.main100').css({' -webkit-overflow-scrolling':'none','overflow':'hidden'});
                         $.fancybox.open( content,{
                             padding : 20 ,
                             afterClose: function() {
-                             
+                              $('.main100').css({' -webkit-overflow-scrolling':'touch','overflow':'auto'});
                             }
                         });
                         
                         
                     });
-                    
-                    
                     $('body').delegate('.fancybox-overlay',"click",function(){
                         alert(123);
                     });
@@ -889,11 +887,11 @@ angular.module('shoooma')
                 /*==================================================================*/
                 
                 /*==================================================================*/
-                $('body').css("overflow","hidden");
+              
                 $('body').delegate(".app_header2 .menu_icon","click",function(){return false;});
-                //var amin = $('.app_header').html();
-                // $('sw-swipe2').prepend('<div class="app_header2">'+amin+'</div>');
-                 //$('.app_header').hide(0);
+                var amin = $('.app_header').html();
+                $('sw-swipe2').prepend('<div class="app_header2">'+amin+'</div>');
+                $('.app_header').hide(0);
                      
 			},//end link
         }

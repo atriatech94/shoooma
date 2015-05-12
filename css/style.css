@@ -219,7 +219,8 @@ ul, menu, dir {
     position: fixed;
     top: 0px;
     right:0px;
-    background-color:#fff;
+    background-color:#242A3A;
+    color:#FFFFFF;
     padding:30px 15px 0px 10px;
     width: 98.5%;
     box-shadow: -7px 0px 10px -6px #767d95 inset;
@@ -233,6 +234,10 @@ ul, menu, dir {
     transition-property: top, bottom;
     transition-duration: 0.7s;
     right: 0px;
+    top:60px;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    height: 100%;
 }
 .swipe_menu{
     background-color:  #242a3a !important;
@@ -245,12 +250,8 @@ ul, menu, dir {
 	-webkit-margin-start: 0px !important;
 	-webkit-margin-end: 0px !important;
 	font-weight: bold !important;
-	text-shadow: -3px 3px 2px #C7DEF2;
-    -moz-text-shadow: -3px 3px 2px #C7DEF2;
-    -webkit-text-shadow: -3px 3px 2px #C7DEF2;
-    -o-text-shadow: -3px 3px 2px #C7DEF2;
 	top: 0px;
-	border-right: 4px solid #3a885f;
+	border-right: 4px solid #499cd0;
     padding: 5px 10px;
     float: right;
     display: block;
@@ -313,9 +314,18 @@ background-position: right;
     margin: 0 auto;
     height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     
 	}
+.fiix{
+    width: 250px;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    height: 100%;
+    
+}
 .post_rent {
 	width: 98%;
     margin:60px auto ;
@@ -415,9 +425,11 @@ background-position: right;
 }
 .swiper-container {
 	width: 100%;
+    position: fixed !important;
 }
 .swiper-slide:nth-child(2) {
 	width: 250px;
+    height: 100%;
 }
 .post_rent {
 	-webkit-overflow-scrolling: touch;
@@ -587,6 +599,9 @@ background-position: right;
     
 }
 /*--================--  special  --===================--*/
+.contain.main100{
+    width: inherit !important;
+}
 .contain{
     padding: 1em 1em;
 
@@ -594,6 +609,9 @@ background-position: right;
 .special{
     margin-top:80px;
     position: relative;
+    width: 95%;
+    margin: 0 auto;
+    top: 100px;
 }
 .special_one{
     width: 100%;
@@ -605,6 +623,8 @@ background-position: right;
     -webkit-box-shadow: 2px 8px 8px -6px rgba(122,122,122,1);
     -moz-box-shadow: 2px 8px 8px -6px rgba(122,122,122,1);
     box-shadow: 2px 8px 8px -6px rgba(122,122,122,1);
+    direction: rtl;
+    text-align: right;
 }
 .special_one img{
     width: 100%;
