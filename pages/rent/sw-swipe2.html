@@ -43,7 +43,7 @@
     <div class="fiix">
         <div class="img_logo"></div>
         <p>استان را انتخاب کنید</p>
-            <select ng-model="filter.state" ng-init="tab1=1"  class="city" name="city">
+            <select ng-model="filter.state" ng-init="tab1=1"  class="city" name="city" id="drop">
               <option  value="آذربایجان شرقی">آذربایجان شرقی</option>
               <option  value="آذربایجان غربی">آذربایجان غربی</option>
               <option value="اردبیل">اردبیل</option>
@@ -76,6 +76,33 @@
               <option value="همدان">همدان</option>
               <option value="یزد">یزد</option>
             </select>
+            <p>شهرستان را انتخاب کنید</p>
+             <select ng-model="filter.shahrestan" ng-init="tab5=1"  class="city" name="city" id="drop2" >
+              <option value="آباده">آباده</option>
+              <option value="ارسنجان">ارسنجان</option>
+              <option value="استهبان">استهبان</option>
+              <option value="اقلید">اقلید</option>
+              <option value="بوانات">بوانات</option>
+              <option value="پاسارگاد">پاسارگاد</option>
+               <option value="جهرم">جهرم</option>
+               <option value="خرم‌بید">خرم‌بید</option>
+               <option value="خنج">خنج</option>
+               <option value="داراب">داراب</option>
+               <option value="زرین‌دشت">زرین‌دشت</option>
+               <option value="سپیدان">سپیدان</option>
+               <option ng-selected="{selected:tab5===1}" value="شیراز" >شیراز</option>
+               <option value="فراشبند">فراشبند</option>
+               <option value="فسا">فسا</option>
+               <option value="فیروزآباد">فیروزآباد</option>
+               <option value="قیر و کارزین">قیر و کارزین</option>
+               <option value="کازرون">کازرون</option>
+               <option value="لارستان">لارستان</option>
+               <option value="ممسنی">ممسنی</option>
+               <option value="لامِرد">لامِرد</option>
+               <option value="مرودشت">مرودشت</option>
+               <option value="مهر">مهر</option>
+               <option value="نی‌ریز">نی‌ریز</option>
+             </select>  
              <p>نوع ملک</p>
             <select ng-model="filter.kind" ng-init="tab2=1"  class="city" name="kind">
              <option  value="">تمامی موارد</option>

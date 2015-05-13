@@ -215,13 +215,12 @@ ul, menu, dir {
 	font-size: 18px !important;
 	text-align: right !important;
     margin: 0 auto;
-    padding-top: 20px;
     position: fixed;
     top: 0px;
     right:0px;
     background-color:#242A3A;
     color:#FFFFFF;
-    padding:30px 15px 0px 10px;
+    padding:10px 15px 0px 10px;
     width: 98.5%;
     box-shadow: -7px 0px 10px -6px #767d95 inset;
 
@@ -283,7 +282,7 @@ ul, menu, dir {
 .back_icon{
     float: left;
     display: block;
-    padding: 20px;
+    padding: 4px;
     position: absolute;
     z-index: 3;
     position: absolute!important;
