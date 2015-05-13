@@ -40,9 +40,7 @@ angular.module('shoooma')
                     event.preventDefault;
                     num = $(this).index();
 				
-                    if(num )
-                    {
-                        //rent
+                    //rent
                         if($rootScope.sale == "none" )
                         {
                             $.fancybox.open("<p>برای مشاهده این قسمت اینترنت گوشی خود را فعال کنید </p><button class='refresh'>تلاش مجدد</button>",{
@@ -52,8 +50,6 @@ angular.module('shoooma')
                             });
                             return false; 
                         }
-                          
-                    }
 
                 });
               
