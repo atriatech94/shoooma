@@ -21,6 +21,7 @@ html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, c
 }
 body {
 	-webkit-overflow-scrolling: touch;
+	-ms-touch-action: pan-y ;
 	line-height: 1;
 	color: black;
 	background: white;

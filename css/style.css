@@ -7,8 +7,8 @@
 	Hex-color : #009390 green , #203b84 blue
 */
 html {
-	/*-ms-touch-action: pan-x;
-	touch-action: pan-x;*/
+	overflow: hidden;
+    -ms-content-zooming: none;
 }
 body {
 	/*-webkit-tap-highlight-color:rgba(0,0,0,0);*/
@@ -215,13 +215,12 @@ ul, menu, dir {
 	font-size: 18px !important;
 	text-align: right !important;
     margin: 0 auto;
-    padding-top: 20px;
     position: fixed;
     top: 0px;
     right:0px;
     background-color:#242A3A;
     color:#FFFFFF;
-    padding:30px 15px 0px 10px;
+    padding:15px 15px 0px 10px;
     width: 98.5%;
     box-shadow: -7px 0px 10px -6px #767d95 inset;
 
@@ -234,8 +233,9 @@ ul, menu, dir {
     transition-property: top, bottom;
     transition-duration: 0.7s;
     right: 0px;
-    top:60px;
+    top:52px;
     -webkit-overflow-scrolling: touch;
+	-ms-touch-action: pan-y ;
     overflow-y: auto;
     height: 100%;
 }
@@ -259,6 +259,7 @@ ul, menu, dir {
     height: 20px;
     white-space: nowrap; 
 	-webkit-overflow-scrolling: touch;
+	-ms-touch-action: pan-y ;
     overflow: hidden;
     text-overflow: ellipsis; 
     
@@ -283,7 +284,7 @@ ul, menu, dir {
 .back_icon{
     float: left;
     display: block;
-    padding: 20px;
+    padding: 9px;
     position: absolute;
     z-index: 3;
     position: absolute!important;
@@ -306,7 +307,6 @@ background-position: right;
 	padding-right: 5px;
 }
 .main {
-	padding: 1em 1em;
     direction: rtl;
 }
 .main1{
@@ -320,19 +320,22 @@ background-position: right;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+	-ms-touch-action: pan-y ;
   }
 .fiix{
     width: 250px;
     height: 100%;
     -webkit-overflow-scrolling: touch;
+	-ms-touch-action: pan-y ;
     overflow-y: auto;
     height: 100%;
     
 }
 .post_rent {
-	width: 98% !important;
+	width: 95% !important;
     margin:60px auto !important;
     -webkit-overflow-scrolling: touch;
+	-ms-touch-action: pan-y ;
     z-index: 4 !important;
 
 }
@@ -375,6 +378,7 @@ background-position: right;
 	float: right;
 	width: 65%;
 	-webkit-overflow-scrolling: touch;
+	-ms-touch-action: pan-y ;
 	overflow: hidden;
 	
 }
