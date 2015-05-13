@@ -45,7 +45,11 @@ angular.module('shoooma')
                         //rent
                         if($rootScope.sale == "none" )
                         {
-                            $.fancybox.open("<p>برای مشاهده این قسمت اینترنت گوشی خود را فعال کنید </p><button class='refresh'>تلاش مجدد</button>");
+                            $.fancybox.open("<p>برای مشاهده این قسمت اینترنت گوشی خود را فعال کنید </p><button class='refresh'>تلاش مجدد</button>",{
+                            afterClose: function() {
+                                document.getElementById("loading").style.display = "none";
+                            }
+                            });
                             return false; 
                         }
                           

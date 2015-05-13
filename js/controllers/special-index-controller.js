@@ -9,7 +9,7 @@ angular.module('shoooma')
 		return {
 			link: function($scope) {
              $('body').css("overflow","hidden");
-                    $( ".contain" ).delegate( ".special_one", "click", function() {
+                    $( ".special_one1" ).delegate( ".special_one", "click", function() {
                         var amin = $scope.special;
                         console.log(amin);
                         melk_id =  $(this).attr('melk_id');
