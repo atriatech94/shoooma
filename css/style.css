@@ -220,7 +220,7 @@ ul, menu, dir {
     right:0px;
     background-color:#242A3A;
     color:#FFFFFF;
-    padding:10px 15px 0px 10px;
+    padding:15px 15px 0px 10px;
     width: 98.5%;
     box-shadow: -7px 0px 10px -6px #767d95 inset;
 
@@ -233,7 +233,7 @@ ul, menu, dir {
     transition-property: top, bottom;
     transition-duration: 0.7s;
     right: 0px;
-    top:60px;
+    top:52px;
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
     height: 100%;
@@ -282,7 +282,7 @@ ul, menu, dir {
 .back_icon{
     float: left;
     display: block;
-    padding: 4px;
+    padding: 9px;
     position: absolute;
     z-index: 3;
     position: absolute!important;
