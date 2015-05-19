@@ -337,7 +337,6 @@ background-position: right;
 	width: 95% !important;
     margin:60px auto !important;
     -webkit-overflow-scrolling: touch;
-	-ms-touch-action: pan-y ;
     z-index: 4 !important;
 
 }
