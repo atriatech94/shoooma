@@ -1,5 +1,5 @@
 (function(){
-angular.module('shoooma', ['ngRoute','ngResource']);
+angular.module('shoooma', ['ngRoute']);
       
 
 })();

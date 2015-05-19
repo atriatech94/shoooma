@@ -7,8 +7,8 @@
 	Hex-color : #009390 green , #203b84 blue
 */
 html {
-	overflow: hidden;
-    -ms-content-zooming: none;
+	overflow: hidden ;
+    -ms-content-zooming: none !important;
 }
 body {
 	/*-webkit-tap-highlight-color:rgba(0,0,0,0);*/
@@ -34,6 +34,8 @@ body {
 	line-height: 1;
 	color: black;
 	background: white;
+    height: 100vh;
+    
 
 }
 :focus {
@@ -715,8 +717,8 @@ background-position: right;
 }
 /*--=============--   --===================--*/
 #contact_us{
-    width: 90%;
-    margin: 20px 0;
+    width: 85%;
+    margin: 20px auto;
 }
 
 #contact_us label{
