@@ -7,8 +7,8 @@
 	Hex-color : #009390 green , #203b84 blue
 */
 html {
-	overflow: hidden ;
-    -ms-content-zooming: none !important;
+	/*-ms-touch-action: pan-x;
+	touch-action: pan-x;*/
 }
 body {
 	/*-webkit-tap-highlight-color:rgba(0,0,0,0);*/
@@ -34,8 +34,6 @@ body {
 	line-height: 1;
 	color: black;
 	background: white;
-    height: 100vh;
-    
 
 }
 :focus {
@@ -237,9 +235,9 @@ ul, menu, dir {
     right: 0px;
     top:52px;
     -webkit-overflow-scrolling: touch;
-	-ms-touch-action: pan-y ;
     overflow-y: auto;
     height: 100%;
+	padding-bottom:100px;
 }
 .swipe_menu{
     background-color:  #242a3a !important;
@@ -261,7 +259,6 @@ ul, menu, dir {
     height: 20px;
     white-space: nowrap; 
 	-webkit-overflow-scrolling: touch;
-	-ms-touch-action: pan-y ;
     overflow: hidden;
     text-overflow: ellipsis; 
     
@@ -309,6 +306,7 @@ background-position: right;
 	padding-right: 5px;
 }
 .main {
+	padding: 1em 1em;
     direction: rtl;
 }
 .main1{
@@ -322,19 +320,17 @@ background-position: right;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-	-ms-touch-action: pan-y ;
   }
 .fiix{
     width: 250px;
     height: 100%;
     -webkit-overflow-scrolling: touch;
-	-ms-touch-action: pan-y ;
     overflow-y: auto;
     height: 100%;
     
 }
 .post_rent {
-	width: 95% !important;
+	width: 98% !important;
     margin:60px auto !important;
     -webkit-overflow-scrolling: touch;
     z-index: 4 !important;
@@ -379,7 +375,6 @@ background-position: right;
 	float: right;
 	width: 65%;
 	-webkit-overflow-scrolling: touch;
-	-ms-touch-action: pan-y ;
 	overflow: hidden;
 	
 }
@@ -620,27 +615,6 @@ background-position: right;
     margin: 0 auto;
     top: 100px;
 }
-.special_one1{
-  position: relative;
-  z-index: 1;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -ms-transition-property: -ms-transform;
-  transition-property: transform;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
 .special_one{
     width: 90%;
     margin: 20px auto !important;
@@ -737,8 +711,8 @@ background-position: right;
 }
 /*--=============--   --===================--*/
 #contact_us{
-    width: 85%;
-    margin: 20px auto;
+    width: 90%;
+    margin: 20px 0;
 }
 
 #contact_us label{

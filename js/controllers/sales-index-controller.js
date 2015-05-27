@@ -176,7 +176,11 @@ angular.module('shoooma')
        				 slidesPerView: 'auto',
                       followFinger : false,
 				});
-				
+				$('.main100').css("height",window.innerHeight);
+					$( window ).resize(function() {
+						console.log(window.innerHeight);
+						$('.main100').css("height",window.innerHeight);
+				   });
 				var shahr = [];
 				shahr['آذربایجان شرقی'] ='آذرشهر ,اسکو ,اهر ,بستان‌آباد ,بناب ,تبریز ,جلفا ,چاراویماق ,سراب ,شبستر ,عجب‌شیر ,کلیبر ,مراغه ,مرند ,ملکان ,میانه ,ورزقان ,هریس ,هشترود';
 				shahr['آذربایجان غربی'] ="ارومیه ,اشنویه ,بوکان ,پیرانشهر ,تکاب ,چالدران ,خوی ,سردشت ,سلماس ,شاهین‌دژ ,ماکو ,مهاباد ,میاندوآب ,نقده";
