@@ -320,6 +320,10 @@ background-position: right;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
   }
 .fiix{
     width: 250px;
@@ -330,15 +334,15 @@ background-position: right;
     
 }
 .post_rent {
-	width: 98% !important;
-    margin:60px auto !important;
+    width: 98% !important;
+    margin-top: 60px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
     -webkit-overflow-scrolling: touch;
-    z-index: 4 !important;
-
 }
 .post_one {
 	border: 1px solid #C9C9C9;
-	padding: .5em
+	padding: .5em;
 }
 .post_one {
 	border: 1px solid #C9C9C9;
@@ -818,7 +822,9 @@ keyframes thumb {
     }
     .post_rent {
         width: 98%;
-        margin: 60px auto;
+            margin-top: 60px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
     }
     .home_main{
         margin-top: 20%;
@@ -832,7 +838,9 @@ keyframes thumb {
     }
     .post_rent {
         width: 98%;
-        margin: 60px auto;
+            margin-top: 60px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
     }
 
     .app_header h2 {
